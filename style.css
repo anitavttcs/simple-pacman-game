@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: url("./img/game_bg.jpg") repeat #81d012;
+  background-size: 180vh auto;
+  font-family: "Press Start 2P";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+body #root #title {
+  position: absolute;
+  top: 100px;
+  width: calc(51vw - 360px);
+  margin-left: 3vw;
+  z-index: 100;
+  line-height: 50px;
+}
+
+body #root #title h1 {
+  font-size: 36px;
+  width: 100%;
+}
+
+body #root #title h1.default {
+  color: black;
+  text-shadow: -1px -1px 0 white,   1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+
+body #root #title h1.xmas {
+  color: maroon;
+  text-shadow: -1px -1px 0 gold,   1px -1px 0 gold, -1px 1px 0 gold, 1px 1px 0 gold;
+}
+
+body #root #board {
+  width: 603px;
+  height: 603px;
+  display: inline-block;
+  position: relative;
+  margin-top: 20px;
+  margin-left: calc(50vw - 320px);
+  background-size: 25px 25px;
+  z-index: -100;
+}
+
+body #root #board.default {
+  background-image: radial-gradient(circle at 1px 1px, #b6b5b5 2px, white 0);
+  border: black solid 3px;
+}
+
+body #root #board.xmas {
+  background-image: radial-gradient(circle at 1px 1px, gold 2px, #122c3d 0);
+  border: maroon solid 3px;
+}
+
+body #root #board #pacman {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+body #root #board #pacman img {
+  width: 100%;
+  height: 100%;
+}
+
+body #root #board .food {
+  width: 15px;
+  height: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  background-color: #d6460d;
+  border-radius: 50%;
+  z-index: -99;
+}
+
+body #root #board .block {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  color: gainsboro;
+}
+
+body #root #board #gameOver {
+  text-align: center;
+  color: #d6460d;
+  line-height: 120px;
+  margin-top: 180px;
+  visibility: hidden;
+  text-shadow: -2px -2px 0 black,   2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+body #root #board #gameOver p {
+  font-size: 100px;
+}
+
+body #root #board #uWon {
+  text-align: center;
+  color: #78d60d;
+  line-height: 120px;
+  margin-top: -220px;
+  margin-left: 25px;
+  visibility: hidden;
+  text-shadow: -2px -2px 0 black,   2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+body #root #board #uWon p {
+  font-size: 65px;
+}
+
+body #root #panel {
+  position: absolute;
+  display: inline-block;
+  width: 120px;
+  top: 50px;
+  margin-left: calc(10vw - 50px);
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 16px;
+}
+
+body #root #panel.default {
+  color: black;
+}
+
+body #root #panel.xmas {
+  color: maroon;
+  text-shadow: -1px -1px 0 gold,   1px -1px 0 gold, -1px 1px 0 gold, 1px 1px 0 gold;
+}
+
+body #root #panel #time, body #root #panel #score, body #root #panel #level, body #root #panel #hScore {
+  border: 3px solid black;
+  margin-bottom: 15px;
+  padding: 5px;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  font-family: "Press Start 2P";
+}
+
+body #root #panel #time.default, body #root #panel #score.default, body #root #panel #level.default, body #root #panel #hScore.default {
+  border: 3px solid black;
+  background-color: white;
+  color: black;
+}
+
+body #root #panel #time.xmas, body #root #panel #score.xmas, body #root #panel #level.xmas, body #root #panel #hScore.xmas {
+  border: 3px solid maroon;
+  background-color: #122c3d;
+  color: maroon;
+  text-shadow: -1px -1px 0 gold,   1px -1px 0 gold, -1px 1px 0 gold, 1px 1px 0 gold;
+}
+
+body #root #panel #time select, body #root #panel #time option, body #root #panel #score select, body #root #panel #score option, body #root #panel #level select, body #root #panel #level option, body #root #panel #hScore select, body #root #panel #hScore option {
+  font-family: "Press Start 2P";
+  font-size: 16px;
+  text-align: center;
+}
+
+body #root #panel #time select.default, body #root #panel #time option.default, body #root #panel #score select.default, body #root #panel #score option.default, body #root #panel #level select.default, body #root #panel #level option.default, body #root #panel #hScore select.default, body #root #panel #hScore option.default {
+  color: black;
+}
+
+body #root #panel #time select.xmas, body #root #panel #time option.xmas, body #root #panel #score select.xmas, body #root #panel #score option.xmas, body #root #panel #level select.xmas, body #root #panel #level option.xmas, body #root #panel #hScore select.xmas, body #root #panel #hScore option.xmas {
+  color: gold;
+}
+
+body #root #panel #sound, body #root #panel #start, body #root #panel #xmas {
+  font-family: "Press Start 2P";
+  line-height: 18px;
+  height: 50px;
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+body #root #panel #sound.default, body #root #panel #start.default, body #root #panel #xmas.default {
+  background-color: gainsboro;
+  border: 3px solid black;
+  color: black;
+}
+
+body #root #panel #sound.default:hover, body #root #panel #start.default:hover, body #root #panel #xmas.default:hover {
+  background-color: gold;
+  color: black;
+}
+
+body #root #panel #sound.xmas, body #root #panel #start.xmas, body #root #panel #xmas.xmas {
+  background-color: green;
+  border: 3px solid gold;
+  color: gold;
+}
+
+body #root #panel #sound.xmas:hover, body #root #panel #start.xmas:hover, body #root #panel #xmas.xmas:hover {
+  background-color: maroon;
+  border: 3px solid white;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

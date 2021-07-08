@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pacman Reloaded</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./game.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        
+        <div id="title"><h1 id="title__h1" class="default">PacMan Reloaded</h1></div>
+    
+        <div id="board" class="default">
+            <div id="pacman">
+                <img id="pacImg" src="./img/pacman.png" alt="">
+            </div>
+    
+            <!-- <div id="block" class="block"></div> -->
+    
+            <div id="gameOver"><p>GAME OVER</p></div>
+            <div id="uWon"><p>CONGRATS, CHAMP!</p></div>
+    
+            <!-- <div id="food" class="food"></div> -->
+        </div>
+    
+        <div id="panel" class="default">
+            <button id="start" class="default">START</button>
+            TIME LEFT: <div id="time" class="default">0:30</div>
+            SCORE: <div id="score" class="default">0</div>
+            <!-- LEVEL: <div id="level">1</div> -->
+            HIGH SCORE: <div id="hScore" class="default">0</div>
+            LEVEL: <select id="level" class="default">
+                <option value="3">1</option>
+                <option value="4">2</option>
+                <option value="5">3</option>
+                <option value="6">4</option>
+                <option value="8">5</option>
+            </select>
+            <button id="sound" class="default">SOUND ON</button>
+            <button id="xmas" class="default">XMAS ON</button>
+    
+        </div>
+
+    </div>
+
+</body>
+
+</html>

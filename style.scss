@@ -1,0 +1,263 @@
+*{
+	margin: 0; border: 0; padding: 0; overflow: hidden; box-sizing: border-box;
+}
+
+body{
+	
+	background: url("./img/game_bg.jpg") repeat #81d012;;
+	background-size: 180vh auto;
+	font-family: "Press Start 2P";
+	display: inline-flex;
+	
+	#root{
+		// display: inline-flex;
+		// flex-direction: row;
+
+		#title{
+			position: absolute;
+			top: 100px;
+			//width: 300px;
+			width: calc(51vw - 360px);
+			//height: 100px;
+			margin-left: 3vw;
+			z-index: 100;
+			line-height: 50px;
+			//line-height: 3vw;
+			
+			h1{
+				font-size: 36px;
+				width: 100%;
+				//font-size: 100%;
+
+				&.default{
+					color: black;
+					text-shadow:
+						-1px -1px 0 white,  
+						1px -1px 0 white,
+						-1px 1px 0 white,
+						1px 1px 0 white;
+				}
+
+				&.xmas{
+					color: maroon;
+					text-shadow:
+						-1px -1px 0 gold,  
+						1px -1px 0 gold,
+						-1px 1px 0 gold,
+						1px 1px 0 gold;
+				}
+			}
+	
+		}
+	
+		#board{
+			width: 603px;
+			height: 603px;
+			display: inline-block;
+			position: relative;
+			margin-top: 20px;
+			margin-left: calc(50vw - 320px);
+			
+			background-size: 25px 25px;
+			z-index: -100;
+
+			&.default{
+				background-image: radial-gradient(circle at 1px 1px, #b6b5b5 2px, white 0);
+				border: black solid 3px;
+			}
+
+			&.xmas{
+				background-image: radial-gradient(circle at 1px 1px, gold 2px, #122c3d 0);
+				border: maroon solid 3px;
+			}
+		
+		
+			#pacman{
+				width: 25px;
+				height: 25px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+		
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		
+			.food{
+				width: 15px;
+				height: 15px;
+				box-sizing: border-box;
+				position: absolute;
+				background-color: #d6460d;
+				//border: black solid 1px;
+				border-radius: 50%;
+				//transition: all ease-in-out .5s;
+				z-index: -99;
+			}
+	
+			.block{
+				width: 25px;
+				height: 25px;
+				position: absolute;
+				left: 25px;
+				top: 25px;
+				color: gainsboro;
+			}
+	
+			#gameOver{
+				text-align: center;
+				color: #d6460d;
+				line-height: 120px;
+				margin-top: 180px;
+				visibility: hidden;
+				text-shadow:
+				-2px -2px 0 black,  
+				2px -2px 0 black,
+				-2px 2px 0 black,
+				2px 2px 0 black;
+				
+				p{
+					font-size: 100px;
+					}
+				}
+	
+			#uWon{
+				text-align: center;
+				color: #78d60d;
+				line-height: 120px;
+				margin-top: -220px;
+				margin-left: 25px;
+				visibility: hidden;
+				text-shadow:
+				-2px -2px 0 black,  
+				2px -2px 0 black,
+				-2px 2px 0 black,
+				2px 2px 0 black;
+				
+				p{
+					font-size: 65px;
+					}
+			}
+	
+		}
+		
+		#panel{
+			position: absolute;
+			display: inline-block;	
+			width: 120px;	
+			top: 50px;
+			margin-left: calc(10vw - 50px);
+			align-content: center;
+			font-size: 16px;
+
+			&.default{
+				color: black;
+			}
+
+			&.xmas{
+				color: maroon;
+				text-shadow:
+						-1px -1px 0 gold,  
+						1px -1px 0 gold,
+						-1px 1px 0 gold,
+						1px 1px 0 gold;
+			}
+	
+	
+			#time, #score, #level, #hScore{
+				border: 3px solid black;
+				margin-bottom: 15px;
+				padding: 5px;
+				font-size: 22px;
+				text-align: center;
+				//height: 30px;
+				width: 100%;
+				font-family: "Press Start 2P";
+				
+				&.default{
+					border: 3px solid black;
+					background-color: white;
+					color: black;
+				}
+	
+				&.xmas{
+					border: 3px solid maroon;
+					background-color: #122c3d;
+					color: maroon;
+					text-shadow:
+						-1px -1px 0 gold,  
+						1px -1px 0 gold,
+						-1px 1px 0 gold,
+						1px 1px 0 gold;
+				}
+
+				select, option{
+					font-family: "Press Start 2P";
+					font-size: 16px;
+					text-align: center;
+
+					&.default{
+						color: black;
+					}
+		
+					&.xmas{
+						// color: maroon;
+						// text-shadow:
+						// -1px -1px 0 gold,  
+						// 1px -1px 0 gold,
+						// -1px 1px 0 gold,
+						// 1px 1px 0 gold;
+						color: gold;
+					}
+				}
+			}
+	
+			// #score{
+				// animation: blink .3s 2;
+				// -webkit-animation: blink .3s 2;
+	
+				// .highlight{
+				// }
+			// }
+		
+			#sound, #start, #xmas{
+				font-family: "Press Start 2P";
+				line-height: 18px;
+				height: 50px;
+				width: 80%;
+				margin-bottom: 15px;
+				
+				&.default{
+					background-color: gainsboro;
+					border: 3px solid black;
+					color: black;
+
+					
+					&:hover{
+						background-color: gold;
+						color: black;
+					}
+				}
+
+				&.xmas{
+					background-color: green;
+					border: 3px solid gold;
+					color: gold;
+
+
+					&:hover{
+						background-color: maroon;
+						border: 3px solid white;
+						color: white;
+					}
+				}
+			}
+	
+		
+		}
+	}
+}
+
+
